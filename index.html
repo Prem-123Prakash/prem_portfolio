@@ -1,102 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prem Prakash - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prem Prakash | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
+
     <!-- HEADER -->
-    <header>
+    <!-- <header>
         <nav>
-            <div class="logo">Prem Prakash</div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/prem-prakash-910a8a244/" target="_blank" class="icon linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Prem-123Prakash" target="_blank" class="icon github">
+                <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.geeksforgeeks.org/user/prempraka2jtg/" target="_blank" class="icon gfg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GFG" class="gfg-icon">
+                </a>
+            </div>
+
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li> -->
+                <!-- <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#achievements">Achievements & Leadership</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+    <header id="main-header">
+    <nav>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/prem-prakash-910a8a244/" target="_blank" class="icon linkedin">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Prem-123Prakash" target="_blank" class="icon github">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/prempraka2jtg/" target="_blank" class="icon gfg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GFG" class="gfg-icon">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements & Leadership</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+
+
+
+
+
 
     <!-- ABOUT -->
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am an enthusiastic Computer Science student with hands-on experience in Quality Assurance, Data Science, and AI-based solutions. I enjoy solving real-world problems through clean, efficient code and insightful data analysis.</p>
+        <div class="about-container" data-aos="fade-up">
+            <img src="image/profile_image.jpeg" alt="Prem Prakash" class="profile-img">
+
+            <!-- <img src="images/profile.jpg" alt="Prem Prakash" class="profile-img"> -->
+            <div>
+                <h1>Prem Prakash</h1>
+                <h3><span id="typed"></span></h3>
+                <p>I’m Prem Prakash, a passionate B.Tech Computer Science & Engineering (Data Science) student at Haldia Institute of Technology with a proven track record in Software Development, Artificial Intelligence, Machine Learning, and Business Intelligence. My journey blends academic excellence (CGPA 8.94) with hands-on experience through impactful internships at RedSeer Strategy Consulting, Sabudh Foundation, and Miles Education, where I delivered projects in predictive modeling, automation, dashboard development, and quality assurance.
+
+💡 Skilled in Python, Machine Learning, Deep Learning, NLP, Power BI, Tableau, OpenCV, TensorFlow, MySQL, and Django, I have a solid foundation in OOPS, DBMS, and Data Structures & Algorithms. My work includes solutions like a Smart Traffic Management System (95% vehicle detection accuracy) and a Punjabi Language Text-to-Speech system, along with 10+ interactive dashboards for corporate clients.
+
+Beyond academics, I contribute as a Placement Coordinator and Technical Member of the Data Science Club, leading workshops, training sessions, and placement drives that have impacted hundreds of students. I hold a 5⭐ Python rating on HackerRank, have research papers under review, and have solved 300+ DSA problems on GeeksforGeeks.
+
+Curiosity, innovation, and collaboration drive my work. I’m always ready to explore opportunities in Software Engineering, AI, Data Science, and Analytics to create real-world impact.</p>
+                <h3>Education</h3>
+                <p>B.Tech in Computer Science and Engineering(Data Science), CGPA: 8.94</p>
+            </div>
+        </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section id="skills" class="section" data-aos="fade-up">
         <h2>Skills</h2>
-        <ul>
-            <li>Python, Java</li>
-            <li>MySQL, Tableau, Power BI</li>
-            <li>Machine Learning, Deep Learning, NLP</li>
-            <li>Django, GitHub</li>
-        </ul>
+        <div class="skills-grid">
+            <span>Python</span>
+            <span>Java</span>
+            <span>MySQL</span>
+            <span>Tableau</span>
+            <span>Power BI</span>
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>NLP</span>
+            <span>Django</span>
+            <span>GitHub</span>
+        </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-        <h2>Work Experience</h2>
-        <div class="job">
-            <h3>Miles Education Pvt Ltd | QA Intern</h3>
-            <p>Apr 2025 – Jul 2025</p>
-            <p>Performed manual testing, reported bugs, validated APIs, and collaborated with teams to ensure quality releases.</p>
-        </div>
-        <div class="job">
-            <h3>RedSeer Strategy Consulting | Research Analyst Intern</h3>
-            <p>Oct 2024 – Jan 2025</p>
-            <p>Created Power BI dashboards, optimized workflows, and delivered insights to boost client engagement.</p>
-        </div>
-        <div class="job">
-            <h3>Sabudh Foundation | Data Science Intern</h3>
-            <p>Jul 2024 – Dec 2024</p>
-            <p>Developed machine learning models, automated pipelines, and created EDA visualizations.</p>
+    <section id="experience" class="section" data-aos="fade-up">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Miles Education | QA Intern</h3>
+                <p>Apr 2025 – Jul 2025</p>
+                <p>Manual testing, bug reporting, and API validation.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>RedSeer | Research Analyst Intern</h3>
+                <p>Oct 2024 – Jan 2025</p>
+                <p>Created Power BI dashboards and optimized workflows.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Sabudh Foundation | Data Science Intern</h3>
+                <p>Jul 2024 – Dec 2024</p>
+                <p>Built ML models, automated pipelines, and EDA visualizations.</p>
+            </div>
         </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section" data-aos="fade-up">
         <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/Prem-123Prakash/Wine_Quality_Prediction" target="_blank">Wine Quality Prediction</a></li>
-            <li><a href="https://github.com/Prem-123Prakash/Smart_Traffic_Management_System" target="_blank">Smart Traffic Management System</a></li>
-        </ul>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Wine Quality Prediction</h3>
+                <p>SVC-driven classification model to predict wine quality.</p>
+                <a href="https://github.com/Prem-123Prakash/Wine_Quality_Prediction" target="_blank">GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Smart Traffic Management</h3>
+                <p>AI-based vehicle detection system using YOLO & OpenCV.</p>
+                <a href="https://github.com/Prem-123Prakash/Smart_Traffic_Management_System" target="_blank">GitHub</a>
+            </div>
+        </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-        <h2>Education</h2>
-        <p>B.Tech in CSE (Data Science) - CGPA: 8.94</p>
-        <p>Intermediate - 71.40%</p>
-        <p>Matriculation - 71.20%</p>
-    </section>
-
-    <!-- ACHIEVEMENTS -->
-    <section id="achievements" class="section">
-        <h2>Achievements</h2>
+    <!-- ACHIEVEMENTS & LEADERSHIP -->
+    <section id="achievements" class="section" data-aos="fade-up">
+        <h2>Achievements & Leadership</h2>
         <ul>
-            <li>EEG Based Mental State Classification (ResNet)</li>
-            <li>EMG Signal Analysis and Classification (Residual Network)</li>
+            <li>EEG Based Mental State Classification</li>
+            <li>EMG Signal Analysis using Residual Network</li>
             <li>5-Star Python on HackerRank</li>
+            <li>Placement Co-ordinator & Cricket Team Captain</li>
         </ul>
-    </section>
-
-    <!-- LEADERSHIP -->
-    <section id="leadership" class="section">
-        <h2>Leadership</h2>
-        <p>Placement Co-ordinator, Technical Member of Data Science Club, Captain of Cricket Team.</p>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" data-aos="fade-up">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:premprakash97237@gmail.com">premprakash97237@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/prem-prakash-910a8a244/" target="_blank">View Profile</a></p>
@@ -106,5 +172,10 @@
     <footer>
         <p>© 2025 Prem Prakash | All Rights Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

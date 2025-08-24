@@ -222,6 +222,87 @@ nav {
 }
 
 
+/* Education */
+.about-edu {
+  margin-top: 30px;
+}
+
+.about-edu h3 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: var(--white);   /* ✅ same as other titles */
+  text-transform: uppercase;
+  text-align: left;      /* ✅ same alignment as Skills/Experience */
+  /* optional underline like a section divider */
+  /* border-bottom: 2px solid var(--gold);  */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 0 10px 20px;
+  max-width: 700px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  width: 3px;
+  height: 100%;
+  background: #2563eb;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-icon {
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 20px;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+  background: #f9fafb;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.timeline-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.timeline-content p {
+  margin: 3px 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
 
 
 .skills-grid {
@@ -260,4 +341,355 @@ footer {
     text-align: center;
     padding: 1rem;
     background: #020c1b;
+}
+.section {
+  padding: 8rem 2rem; /* reduce large gap */
+  max-width: 1200px;
+  margin: auto;
+}
+/* 
+section {
+  scroll-margin-top: 200px; /* prevent navbar from hiding titles */
+/* } */ 
+
+/* ==== Education Section Fixes ==== */
+.about-edu h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0; /* align left */
+  padding: 10px 0 10px 20px; /* space from left */
+  max-width: 700px;
+}
+
+/* Reduce top space ONLY for Education section */
+#education.section {
+  padding-top: 3rem;  /* reduce from 5rem (80px) → 2rem (32px) */
+}
+
+
+/* Skills Section */
+#skills.section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
+.skills-grid span {
+  background: #112240;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--gold);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-grid span:hover {
+  background: #1e3a8a;
+  color: #fff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* ================= Experience Section ================= */
+#experience h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Timeline Wrapper */
+.exp-timeline {
+  position: relative;
+  margin: 0 ;
+  padding: 10px 0;
+  max-width: 800px;
+  border-left: 3px solid var(--gold);
+}
+
+/* Each Item */
+.exp-item {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* Circle Icon Before Each Job */
+.exp-item::before {
+  content: "💼"; /* icon */
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Company / Role */
+.exp-item h3 {
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+/* Dates */
+.exp-item .exp-date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+/* Description */
+.exp-item p {
+  margin: 3px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Hover Animation */
+.exp-item:hover {
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+/* ================= Projects Section ================= */
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Wrapper */
+.project-timeline {
+  max-width: 800px;
+  margin: 0;
+  padding-left: 0;
+  border-left: none; /* no vertical line */
+}
+
+/* Each Project */
+.project-item {
+  background: #112240;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-align: left; /* align everything left */
+}
+
+/* Hover */
+.project-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Title */
+.project-item h3 {
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+/* Date */
+.project-item .project-date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+
+/* Description */
+.project-item p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 6px 0;
+}
+
+/* GitHub Link */
+.project-item a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.project-item a:hover {
+  border-bottom: 1px solid var(--gold);
+  color: #fff;
+}
+/* ================= Achievements Section ================= */
+#achievements h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Timeline Wrapper */
+.ach-timeline {
+  position: relative;
+  margin: 0;
+  padding: 10px 0;
+  max-width: 800px;
+  border-left: 3px solid var(--gold);
+}
+
+/* Each Achievement */
+.ach-item {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* Icon Before Each Achievement */
+.ach-item::before {
+  content: "🏅"; /* default icon */
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Achievement Title */
+.ach-item h3 {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+/* Date */
+.ach-item .ach-date {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+/* Description */
+.ach-item p {
+  margin: 3px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Hover Effect */
+.ach-item:hover {
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+/* ================= Contact Section ================= */
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.contact-intro {
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: #112240;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon Style */
+.contact-card i {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #1e3a8a, #0A192F);
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--gold);
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
 }

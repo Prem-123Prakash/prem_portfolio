@@ -385,6 +385,39 @@
       </a>
     </div>
 
+    <!-- Desktop Floating Contact Button -->
+    <div class="desktop-chat-widget">
+      <button id="open-chat">
+        <i class="fa-solid fa-comment"></i> Contact Us
+      </button>
+
+      <div class="chat-popup" id="chat-popup">
+        <div class="chat-header">
+          <span>Let's Connect</span>
+          <button id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body">
+          <p>
+            Please provide your contact details and message, and I will get back to you promptly.
+          </p>
+          <form id="contact-form">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="tel" name="phone" placeholder="Phone" required />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+              maxlength="100"
+            ></textarea>
+            <div id="char-count">0 / 100</div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
     <script>
       AOS.init();
@@ -409,5 +442,42 @@
         });
       });
     </script>
+<!-- Contact us for desktop -->
+    <script>
+      const openBtn = document.getElementById("open-chat");
+      const closeBtn = document.getElementById("close-chat");
+      const chatPopup = document.getElementById("chat-popup");
+
+      // Open/close chat popup
+      openBtn.addEventListener("click", () => {
+        chatPopup.style.display = "flex";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        chatPopup.style.display = "none";
+      });
+
+      // Form submit
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Message received! I’ll be in touch soon.");
+          chatPopup.style.display = "none";
+          e.target.reset();
+          document.getElementById("char-count").textContent = "0 / 100"; // reset counter
+        });
+
+      // Character counter
+      const messageField = document.getElementById("message");
+      const charCount = document.getElementById("char-count");
+
+      messageField.addEventListener("input", () => {
+        const length = messageField.value.length;
+        charCount.textContent = `${length} / 100`;
+      });
+    </script>
+
+
   </body>
 </html>

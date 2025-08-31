@@ -881,3 +881,105 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Desktop Chat Widget */
+.desktop-chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: sans-serif;
+}
+
+#open-chat {
+  background-color: #ff4f4f;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 320px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 1001;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #ff4f4f;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 12px;
+}
+
+.chat-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-body input,
+.chat-body textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+#char-count {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+}
+
+.chat-body button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.chat-body button:hover {
+  background-color: #555;
+}
+
+
+/* contact us hiding for mobile/responsive only we are sowing on desktop */
+
+/* Hide the desktop chat widget on small screens (mobile/tablet) */
+@media screen and (max-width: 768px) {
+  .desktop-chat-widget {
+    display: none;
+  }
+}

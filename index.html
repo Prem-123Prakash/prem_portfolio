@@ -84,20 +84,20 @@
           <h1>Prem Prakash</h1>
           <h3><span id="typed"></span></h3>
           <p>
-            I’m Prem Prakash, a B.Tech Computer Science & Engineering
-            (Data Science) graduate from Haldia Institute of Technology with a
-            proven track record in Software Development, Artificial
-            Intelligence, Machine Learning, and Business Intelligence. My
-            journey blends academic excellence (CGPA 8.94) with hands-on
-            experience through impactful internships at RedSeer Strategy
-            Consulting, Sabudh Foundation, and Miles Education, where I
-            delivered projects in predictive modeling, automation, dashboard
-            development, and quality assurance. 💡 Skilled in Python, Machine
-            Learning, Deep Learning, NLP, Power BI, Tableau, OpenCV, TensorFlow,
-            MySQL, and Django, I have a solid foundation in OOPS, DBMS, and Data
-            Structures & Algorithms. My work includes solutions like a Smart
-            Traffic Management System (95% vehicle detection accuracy) and a
-            Punjabi Language Text-to-Speech system, along with 10+ interactive
+            I’m Prem Prakash, a B.Tech Computer Science & Engineering (Data
+            Science) graduate from Haldia Institute of Technology with a proven
+            track record in Software Development, Artificial Intelligence,
+            Machine Learning, and Business Intelligence. My journey blends
+            academic excellence (CGPA 8.94) with hands-on experience through
+            impactful internships at RedSeer Strategy Consulting, Sabudh
+            Foundation, and Miles Education, where I delivered projects in
+            predictive modeling, automation, dashboard development, and quality
+            assurance. 💡 Skilled in Python, Machine Learning, Deep Learning,
+            NLP, Power BI, Tableau, OpenCV, TensorFlow, MySQL, and Django, I
+            have a solid foundation in OOPS, DBMS, and Data Structures &
+            Algorithms. My work includes solutions like a Smart Traffic
+            Management System (95% vehicle detection accuracy) and a Punjabi
+            Language Text-to-Speech system, along with 10+ interactive
             dashboards for corporate clients. Beyond academics, I contribute as
             a Placement Coordinator and Technical Member of the Data Science
             Club, leading workshops, training sessions, and placement drives
@@ -369,9 +369,45 @@
       <p>© 2025 Prem Prakash | All Rights Reserved</p>
     </footer>
 
+    <!-- Mobile-only Floating Contact Buttons -->
+    <div class="mobile-floating-contact">
+      <a href="tel:+911234567890" class="contact-btn">
+        <i class="fa-solid fa-phone"></i>
+        <span>Phone</span>
+      </a>
+      <a href="https://wa.me/911234567890" class="contact-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+      <a href="mailto:premprakash97237@gmail.com" class="contact-btn">
+        <i class="fa-solid fa-comment"></i>
+        <span>Chat</span>
+      </a>
+    </div>
+
     <script src="script.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <!-- Smooth Scroll for Navbar -->
+    <script>
+      const navLinks = document.querySelectorAll("#primary-nav a");
+      const navHeight = document.querySelector("nav").offsetHeight;
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          const targetPosition =
+            target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        });
+      });
     </script>
   </body>
 </html>

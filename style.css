@@ -830,8 +830,54 @@ section p {
     }
 }
 
-
+/* maintain the profile image and my name  -->>> in my about us section*/ 
 #about h1 {
     margin-top: 1rem; 
     margin-bottom: 1rem;
 }
+
+
+/* Mobile Floating Contact Buttons */
+.mobile-floating-contact {
+    display: none; /* hidden by default */
+}
+
+@media (max-width: 768px) {
+    .mobile-floating-contact {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .mobile-floating-contact .contact-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+        color: #0A192F;
+        text-decoration: none;
+    }
+
+    .mobile-floating-contact .contact-btn i {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+        color: #007BFF; /* Default color, can customize per icon */
+    }
+
+    /* Optional: Specific colors */
+    .mobile-floating-contact .contact-btn:nth-child(1) i { color: #25D366; } /* Phone green */
+    .mobile-floating-contact .contact-btn:nth-child(2) i { color: #128C7E; } /* WhatsApp green */
+    .mobile-floating-contact .contact-btn:nth-child(3) i { color: #007BFF; } /* Chat blue */
+}
+/* for smooth navigation bar */
+html {
+  scroll-behavior: smooth;
+}
+

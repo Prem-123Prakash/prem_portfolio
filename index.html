@@ -15,31 +15,6 @@
     />
   </head>
   <body>
-    <!-- HEADER -->
-    <!-- <header>
-        <nav>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/prem-prakash-910a8a244/" target="_blank" class="icon linkedin">
-                <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/Prem-123Prakash" target="_blank" class="icon github">
-                <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.geeksforgeeks.org/user/prempraka2jtg/" target="_blank" class="icon gfg">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GFG" class="gfg-icon">
-                </a>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li> -->
-    <!-- <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements & Leadership</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
     <header id="main-header">
       <nav>
         <div class="social-icons">
@@ -69,7 +44,8 @@
             />
           </a>
         </div>
-        <ul class="nav-links">
+
+        <ul class="nav-links" id="primary-nav">
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -78,6 +54,19 @@
           <li><a href="#achievements">Achievements & Leadership</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- ✅ Add this button -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </nav>
     </header>
 
@@ -119,8 +108,6 @@
             opportunities in Software Engineering, AI, Data Science, and
             Analytics to create real-world impact.
           </p>
-          <!-- <h3>Education</h3>
-                <p>B.Tech in Computer Science and Engineering(Data Science), CGPA: 8.94</p> -->
         </div>
       </div>
     </section>
